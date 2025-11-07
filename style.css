@@ -1,0 +1,75 @@
+:root {
+  --accent: #0b84ff;
+  --sel-bg: #ffdca8;
+}
+
+body {
+  padding: 24px;
+
+  font-family: Inter, system-ui, sans-serif;
+  color: #111;
+
+  background: #fafafa;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.field__input {
+  width: 100%;
+
+  font-size: 16px;
+}
+
+.field__input,
+.output {
+  padding: 8px 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin-bottom: 20px;
+
+  color: white;
+
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+
+  cursor: pointer;
+}
+
+.output {
+  position: relative;
+
+  min-height: 120px;
+  margin-bottom: 8px;
+
+  user-select: none;
+}
+
+.chars {
+  display: inline-block;
+
+  line-height: 1.6;
+}
+
+.hint {
+  font-size: 14px;
+  color: #666;
+}
