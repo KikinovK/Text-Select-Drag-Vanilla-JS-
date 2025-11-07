@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text Select & Drag (Vanilla JS)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h2>Text editor - selecting and dragging characters (Vanilla JS)</h2>
+
+    <div class="field">
+      <label class="field__label" for="txt">Enter the line:</label>
+      <input class="field__input" id="txt" type="text" value="Example: Select letters or drag them" />
+    </div>
+    <button class="btn" id="render">Show line</button>
+
+    <div class="output" id="output" tabindex="0">
+      <div class="chars" id="chars"></div>
+    </div>
+    <button class="btn" id="clear">Clear selection</button>
+
+    <div class="hint">
+      <ul>
+        <li>Ctrl + click on a character — add/deselect one character.</li>
+        <li>Click+drag with the mouse in the block — draw a rectangle to select multiple characters.</li>
+        <li>Drag the selected characters within the line or to another location - the characters will be inserted/swapped.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

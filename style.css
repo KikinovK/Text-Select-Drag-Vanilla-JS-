@@ -1,0 +1,127 @@
+:root {
+  --accent: #0b84ff;
+  --sel-bg: #ffdca8;
+}
+
+body {
+  padding: 24px;
+
+  font-family: Inter, system-ui, sans-serif;
+  color: #111;
+
+  background: #fafafa;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.field__input {
+  width: 100%;
+
+  font-size: 16px;
+}
+
+.field__input,
+.output {
+  padding: 8px 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin-bottom: 20px;
+
+  color: white;
+
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+
+  cursor: pointer;
+}
+
+.output {
+  position: relative;
+
+  min-height: 120px;
+  margin-bottom: 8px;
+
+  user-select: none;
+}
+
+.chars {
+  display: inline-block;
+
+  line-height: 1.6;
+}
+
+.char {
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 0;
+
+  border-radius: 4px;
+  transition: background .12s, color .12s;
+  cursor: default;
+}
+
+.char.space {
+  width: 10px;
+}
+
+.char.space:before {
+  content: '1';
+  opacity: 0;
+}
+
+.char.selected {
+  color: #000;
+
+  background: var(--sel-bg);
+}
+
+.char.dragging {
+  opacity: .3
+}
+
+.ghost {
+  position: fixed;
+
+  padding: 6px;
+
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.selection-rect {
+  position: absolute;
+
+  border: 1px dashed var(--accent);
+  background: rgba(11, 132, 255, .06);
+
+  z-index: 5;
+}
+
+.hint {
+  font-size: 14px;
+  color: #666;
+}
